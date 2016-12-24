@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page Player - Test URL</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="xxxxxxxxxxxxxxxxxxx" />
+    <meta name="description" content="xxxxxx" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link href="" rel="shortcut icon" /> --
+    <style>
+        html, body, iframe, section {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: none;
+        }
+
+            div#Support, div#Player {
+                display: none;
+            }
+    </style>
+</head>
+<body>
+    <div id="Background">
+        <!-- <div style="position: absolute; width: 100%; height: 100%;
+            background-image:url('xxxxxxxxxxxxxxxxxxx'); z-index:-1;"></div>
+        <div style="position: absolute; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.75),rgba(155, 144, 144, 0.50));
+            z-index:-1;"></div> -->
+    </div>
+
+   <div id="Support" style="position: absolute; padding: 1%; z-index: 0; color: whitesmoke; width: 100%; height: 2%;" class="Off">Log and support</section>
+
+    <div id="Welcome" style="padding: 10%;">
+
+
+        <div id="WelcomeContent" style="width: 250px; ">
+            <div id="Article1" title="seamless and sandboxed iframe" style="float: right; width: 240px; user-select:none; -ms-user-select:none; -webkit-user-select:none; cursor:default; border-top: 75px solid transparent; background: linear-gradient(black, darkviolet);background: -webkit-linear-gradient(black, darkviolet); " draggable="true">
+                <figure style=" margin:0 0 0 0; padding: 0 0 0 0; background-color: transparent;">
+                    <img id="Image1" src="xxxxxx" />
+                    <p style="background-color:black; color:whitesmoke; margin:0 0 0 0; padding: 0 0 0 0; height: 75px;font-size:small; padding-left: 10px; padding-top: 10px;">
+                        Test a page on both mode<br /><br />
+                        <input id="TestingUrl" type="url"
+                               pattern="https?://.+"
+                               placeholder="enter your url..." />
+
+                        <button id="Button_Start" style="visibility:collapse; font-size:small;" onclick="Startt();">Start</button>
+                        <noscript style="color: whitesmoke; ">Test URL</noscript>
+                    </p>
+                </figure>
+                <script>
+                    window.addEventListener('load', function () {
+                        document.getElementById('Button_Start').style.visibility = "visible";
+                    }, true);
+                    //Image1.addEventListener('load', function () {
+                    //    document.getElementById('Article1').style.width = Image1.naturalWidth + "px";
+                    //    //document.getElementById('Article1').style.display = "inline-block";
+                    //}, true);
+
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div id="Data" style="display:none;" title="playlist">
+
+        <a href='http://www.xxxxx.com/xxxx/x'></a>
+        <a href='http://www.xxxxx.com/xxxx/x'></a>
+        <a href='http://www.xxxxx.com/xxxx/x'></a>
+        <a href='http://www.xxxxx.com/xxxx/x'></a>
+
+    </div>
+    <div id="Player">
+        <div id="Shield" style="position:absolute; width: 100%; height: 100%; background-color: rgba(8, 8, 8, 0.0); z-index: 3;"></div>
+        <style>
+            .Off {
+                display: none;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                opacity: 0.0;
+                z-index: initial;
+            }
+
+            .ShowOutput1 {
+                animation: FadeInO1 .75s ease-in forwards;
+                -webkit-animation: FadeInO12 .75s ease-in forwards;
+                display: inline;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 1;
+            }
+
+            @keyframes FadeInO1 {
+                to {
+                    opacity: 1.0;
+                }
+            }
+
+            @-webkit-keyframes FadeInO12 {
+                to {
+                    opacity: 1.0;
+                }
+            }
+
+            .HideOutput1 {
+                animation: FadeOut1 .75s ease-in forwards;
+                -webkit-animation: FadeOut12 .75s ease-in forwards;
+                display: inline;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+                opacity: 1.0;
+            }
+
+            @keyframes FadeOut1 {
+                to {
+                    opacity: 0.0;
+                }
+            }
+
+            @-webkit-keyframes FadeOut12 {
+                to {
+                    opacity: 0.0;
+                }
+            }
+
+            .HideOutput2 {
+                animation: FadeOut .75s ease-in forwards;
+                -webkit-animation: FadeOut2 .75s ease-in forwards;
+                display: inline;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+                opacity: 1.0;
+            }
+
+            @keyframes FadeOut {
+                to {
+                    opacity: 0.0;
+                }
+            }
+
+            @-webkit-keyframes FadeOut2 {
+                to {
+                    opacity: 0.0;
+                }
+            }
+
+            .ShowOutput2 {
+                animation: FadeIn .75s ease-in forwards;
+                -webkit-animation: FadeIn2 .75s ease-in forwards;
+                display: inline;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+            }
+
+            @keyframes FadeIn {
+                to {
+                    opacity: 1.0;
+                }
+            }
+
+            @-webkit-keyframes FadeIn2 {
+                to {
+                    opacity: 1.0;
+                }
+            }
+        </style>
+
+        <div style="position:absolute; z-index: 3; background-color: rgba(163, 73, 164, .45); " id="CurrentURLt"></div>
+        <iframe id="Layer1" class="Off" seamless="seamless" sandbox=""></iframe>
+        <iframe id="Layer2" class="Off"></iframe>
+        <script>
+            function Startt() {
+
+                 if (document.getElementById('TestingUrl').value == "") return;
+Welcome.style.display = 'none'; Player.style.display = 'block';
+
+                WPSSt = {};
+                WPSSt.Duration = 5000;
+                WPSSt.CurrentOutput = "Layer1";
+                WPSSt.playlist = document.querySelectorAll("div#Data a");
+
+
+                if (document.getElementById('TestingUrl').value.indexOf("http://") == -1)
+                    document.getElementById('TestingUrl').value = "http://" + document.getElementById('TestingUrl').value;
+
+
+
+                if (WPSSt.playlist.length < 10) WPSSt.playlist.RandomLength = 10;
+                else if (WPSSt.playlist.length < 100) WPSSt.playlist.RandomLength = 100;
+                else if (WPSSt.playlist.length < 1000) WPSSt.playlist.RandomLength = 1000;
+                WPSSt.ShowNext = function () {
+                    switch (WPSSt.CurrentOutput) {
+                        case "Layer1": document.getElementById('Layer2').classList.remove("ShowOutput2");
+                            document.getElementById('Layer2').classList.add("HideOutput2");
+                            document.getElementById('Layer1').classList.add("ShowOutput1");
+                            document.getElementById('CurrentURLt').textContent = "Sandboxed: " + document.getElementById('Layer1').src;
+                            break;
+                        case "Layer2": document.getElementById('Layer2').classList.add("ShowOutput2");
+                            document.getElementById('Layer1').classList.remove("ShowOutput1");
+                            document.getElementById('Layer1').classList.add("HideOutput1");
+                            document.getElementById('CurrentURLt').textContent = "Unsandboxed: " + document.getElementById('Layer2').src;
+                            break;
+                        default:
+                            break;
+                    };
+                    setTimeout(function () {
+                        setTimeout(WPSSt.LoadNext, 2000);
+                        setTimeout(WPSSt.ShowNext, WPSSt.Duration);
+                    }, 15000);
+                };
+                WPSSt.LoadNext = function () {
+                    WPSSt.CurrentIndex = WPSSt.Next();
+                    var _frame = (WPSSt.CurrentOutput == "Layer1" ? document.getElementById('Layer2') : document.getElementById('Layer1'));
+                    if (WPSSt.CurrentOutput == "Layer1") {
+                        document.getElementById('Layer2').classList.remove("ShowOutput2");
+                        document.getElementById('Layer2').classList.remove("HideOutput2");
+                    };
+                    if (WPSSt.CurrentOutput == "Layer2") {
+                        document.getElementById('Layer1').classList.remove("ShowOutput1");
+                        document.getElementById('Layer1').classList.remove("HideOutput1");
+                    };
+
+                    /* _frame.src = WPSSt.playlist[WPSSt.CurrentIndex].href; */
+                    WPSSt.CurrentOutput = (WPSSt.CurrentOutput == "Layer1" ? "Layer2" : "Layer1");
+                };
+                WPSSt.ElectedItems = 0;
+                WPSSt.Next = function () {
+                    var _elected = -1;
+                    if (WPSSt.ElectedItems == 1) { _elected = 0; } else _elected = 1;
+                    WPSSt.ElectedItems = _elected;
+
+                    return _elected;
+                };
+
+                //fadeout images/start button
+                document.getElementById("Welcome").classList.add("HideOutput2");
+                document.getElementById("Background").classList.add("HideOutput2");
+
+                WPSSt.CurrentIndex = WPSSt.Next();
+
+
+                var _frame = document.getElementById('Layer1');
+                _frame.src = document.getElementById('TestingUrl').value;
+                _frame.addEventListener('readystatechange', ReadyStateChangedt, true);
+                _frame.addEventListener('load', ReadyStateChanged1t, true);
+                document.getElementById('CurrentURLt').textContent = "Sandboxed: " + _frame.src;
+
+
+                document.getElementById('Layer2').src = document.getElementById('TestingUrl').value;
+
+            };
+            var _counter1 = -1;
+            function ReadyStateChangedt(evt) {
+                if (evt.target.src == "") return; _counter1 += 1; if (_counter1 == 2) {
+                    evt.target.classList.add("ShowOutput1");
+                    evt.target.removeEventListener('readystatechange', ReadyStateChangedt, true);
+                    evt.target.removeEventListener('load', ReadyStateChanged1t, true);
+
+                    if (WPSSt.playlist.length > 1) {
+                        // completely remove those elements
+                        document.getElementById("Background").removeNode(true);
+                        document.getElementById("Welcome").removeNode(true);
+
+                        setTimeout(WPSSt.LoadNext, 2000);
+                        setTimeout(WPSSt.ShowNext, WPSSt.Duration);
+                    }
+                }
+            };
+            function ReadyStateChanged1t(evt) {
+                //if (evt.target.src == "") return; _counter1 += 1; if (_counter1 == 2) {
+                evt.target.classList.add("ShowOutput1");
+                evt.target.removeEventListener('readystatechange', ReadyStateChangedt, true);
+                evt.target.removeEventListener('load', ReadyStateChanged1t, true);
+
+                if (WPSSt.playlist.length > 1) {
+                    // completely remove those elements
+                    //document.getElementById("Background").removeNode(true);
+                    //document.getElementById("Welcome").removeNode(true);
+                    document.getElementById("Background").style.display = "none";
+                    document.getElementById("Welcome").style.display = "none";
+
+                    setTimeout(WPSSt.LoadNext, 2000);
+                    setTimeout(WPSSt.ShowNext, WPSSt.Duration);
+                }
+                //}
+            };
+        </script>
+    </div>
+
+</body>
+</html>
